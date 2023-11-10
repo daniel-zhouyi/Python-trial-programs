@@ -14,7 +14,7 @@ def main():
 
     while True:
         secret_num = getSecretNum()
-        print('I''ve thought up a number.')
+        print('I'f've thought up a number.')
         print('You have {} guesses to get it.'.format(MAX_GUESS))
 
         numGuesses = 1
@@ -24,20 +24,20 @@ def main():
                 print('Guess #{}'.format(numGuesses))
                 guess = input('> ')
 
-                clues = getClues(guess, secret_num)
-                print(clues)
-                numGuesses += 1
+            clues = getClues(guess, secret_num)
+            print(clues)
+            numGuesses += 1
 
-                if guess == secret_num:
-                    break
+            if guess == secret_num:
+                break
 
         if numGuesses > MAX_GUESS:
             print('You ran out of guesses.')
             print('The answer was {}'.format(secret_num))
 
-            print('Do you want to play again?(yes or no)')
-            if not input('> ').lower().startswith('y'):
-                break
+        print('Do you want to play again?(yes or no)')
+        if not input('> ').lower().startswith('y'):
+            break
 
     print('Thanks for playing!')
 
